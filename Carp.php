@@ -77,7 +77,9 @@
 
 	@section download Download
 
-	@todo svn or git?
+	@code
+	git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Carp.git
+	@endcode
 
 	@section installation Installation
 
@@ -198,21 +200,25 @@ if ( ! defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }; // if
 
+$extCarpDir = defined( __DIR__ ) ? __DIR__ : dirname( __FILE__ );
+
 global $wgAutoloadClasses;
-$wgAutoloadClasses[ 'Carp' ] = __DIR__ . '/Carp.class.php';
+$wgAutoloadClasses[ 'Carp' ] = $extCarpDir . '/Carp.class.php';
 
 global $wgExtensionMessagesFiles;
-$wgExtensionMessagesFiles[ 'Carp' ] = __DIR__ . '/Carp.i18n.php';
+$wgExtensionMessagesFiles[ 'Carp' ] = $extCarpDir . '/Carp.i18n.php';
 
 global $wgExtensionCredits;
 $wgExtensionCredits[ 'other' ][] = array(
 	'path'    => __FILE__,
 	'name'    => 'Carp',
-	'version' => '0.0.1',
+	'version' => 'devel',
 	'license' => 'AGPLv3',
 	'author'  => array( '[https://www.mediawiki.org/wiki/User:Van_de_Bugger Van de Bugger]' ),
 	'url'     => 'https://www.mediawiki.org/wiki/Extension:Carp',
 	'descriptionmsg'  => 'carp-desc',
 );
+
+unset( $extCarpDir );
 
 // end of file //

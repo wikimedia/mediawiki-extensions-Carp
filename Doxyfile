@@ -1,0 +1,8 @@
+PROJECT_NAME           = "Carp"
+OUTPUT_DIRECTORY       = doc
+TAB_SIZE               = 4
+HIDE_UNDOC_MEMBERS     = YES
+HIDE_UNDOC_CLASSES     = YES
+FILE_PATTERNS          = *.php
+EXCLUDE_PATTERNS       = *.i18n.php
+GENERATE_LATEX         = NO
