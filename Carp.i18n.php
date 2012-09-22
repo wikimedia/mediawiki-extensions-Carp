@@ -11,14 +11,14 @@ $messages = array();
 /** English
  * @author Van de Bugger
  */
-$messages[ 'en' ] = array(
+$messages['en'] = array(
 	'carp-desc' => 'Provides error reporting and stack unwinding to other extensions.',
 	'carp-function-msg' => '&#123;&#123; $1: $2 &#125;&#125;',
 	'carp-template-msg' => '&#123;&#123; $1 &#124; $2 &#125;&#125;',
 	'carp-template'     => '&#123;&#123; $1 &#125;&#125;',
 );
 
-$messages[ 'qqq' ] = array(
+$messages['qqq'] = array(
 	'carp-function-msg' => 'Parser function error decorator. Paramaters:
 $1 is name of function,
 $2 is the error message.
@@ -37,6 +37,7 @@ Similar to parser function decorator, but this one formats template errors.',
 /** Russian (Русский)
  * @author Van de Bugger
  */
-$messages[ 'ru' ] = array(
+$messages['ru'] = array(
 	'carp-desc' => 'Предоставляет другим расширениям сервис для сообщений об ошибках и раскрутки стека вызовов.',
 );
+
