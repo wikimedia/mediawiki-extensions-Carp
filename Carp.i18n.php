@@ -18,6 +18,7 @@ $messages['en'] = array(
 	'carp-template'     => '&#123;&#123; $1 &#125;&#125;',
 );
 
+/** Message documentation (Message documentation) */
 $messages['qqq'] = array(
 	'carp-function-msg' => 'Parser function error decorator. Paramaters:
 $1 is name of function,
@@ -31,10 +32,55 @@ Translators can change order (e. g. put function name on the left side of error 
 $1 is template name,
 $2 is error message.
 Similar to parser function decorator, but this one formats template errors.',
-	'carp-template'     => 'Template decorator. Used in stack backtrace.',
+	'carp-template' => 'Template decorator. Used in stack backtrace.',
 );
 
-/** Russian (Русский)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'carp-desc' => 'Магчымасьць паведамленьня пра памылкі і адлюстраваньня разгорнутага стэку для іншых пашырэньняў.',
+);
+
+/** German (Deutsch)
+ * @author Kghbln
+ */
+$messages['de'] = array(
+	'carp-desc' => 'Ermöglicht Fehlerberichterstattungen und Stapelabwicklungen zu anderen Erweiterungen',
+);
+
+/** Lower Sorbian (dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'carp-desc' => 'Zmóžnja rozpšawjenje a wótwijanje štapjelow k drugim rozšyrjenjam.',
+);
+
+/** Upper Sorbian (hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'carp-desc' => 'Zmóžnja zdźělenje zmylkow a wotwiwanje staplow k druhim rozšěrjenjam.',
+);
+
+/** Japanese (日本語)
+ * @author Shirayuki
+ */
+$messages['ja'] = array(
+	'carp-desc' => '他の拡張機能に、エラー報告やスタック解放の機能を提供する。',
+	'carp-function-msg' => '&#123;&#123; $1: $2 &#125;&#125;',
+	'carp-template-msg' => '&#123;&#123; $1 &#124; $2 &#125;&#125;',
+	'carp-template' => '&#123;&#123; $1 &#125;&#125;',
+);
+
+/** Macedonian (македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'carp-desc' => 'Пријавува грешки и одвиткува складови за другите додатоци.',
+);
+
+/** Russian (русский)
  * @author Van de Bugger
  */
 $messages['ru'] = array(
