@@ -56,11 +56,25 @@ $messages['dsb'] = array(
 	'carp-desc' => 'Zmóžnja rozpšawjenje a wótwijanje štapjelow k drugim rozšyrjenjam.',
 );
 
+/** Galician (galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'carp-desc' => 'Proporciona informes de erros e desenrolamento de pilas de memoria ás outras extensións.',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
 	'carp-desc' => 'Zmóžnja zdźělenje zmylkow a wotwiwanje staplow k druhim rozšěrjenjam.',
+);
+
+/** Italian (italiano)
+ * @author Beta16
+ */
+$messages['it'] = array(
+	'carp-desc' => 'Fornisce le segnalazioni di errori e le chiamate nello stack di altre estensioni.',
 );
 
 /** Japanese (日本語)
@@ -73,11 +87,25 @@ $messages['ja'] = array(
 	'carp-template' => '&#123;&#123; $1 &#125;&#125;',
 );
 
+/** Korean (한국어)
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'carp-desc' => '다른 확장 기능에 오류 보고와 스택 해제 기능을 제공합니다.',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
 	'carp-desc' => 'Пријавува грешки и одвиткува складови за другите додатоци.',
+);
+
+/** Polish (polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'carp-desc' => 'Umożliwia raportowanie błędów i stos przywracania do innych rozszerzeń.',
 );
 
 /** Russian (русский)
