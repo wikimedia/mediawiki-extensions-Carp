@@ -35,7 +35,7 @@ Similar to parser function decorator, but this one formats template errors.',
 	'carp-template' => 'Template decorator. Used in stack backtrace.',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
 $messages['be-tarask'] = array(
@@ -54,6 +54,13 @@ $messages['de'] = array(
  */
 $messages['dsb'] = array(
 	'carp-desc' => 'Zmóžnja rozpšawjenje a wótwijanje štapjelow k drugim rozšyrjenjam.',
+);
+
+/** Spanish (español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'carp-desc' => 'Proporciona informes de errores y el desenredo de la pila de memoria a las otras extensiones.',
 );
 
 /** Galician (galego)
