@@ -44,9 +44,10 @@ $messages['be-tarask'] = array(
 
 /** German (Deutsch)
  * @author Kghbln
+ * @author Purodha
  */
 $messages['de'] = array(
-	'carp-desc' => 'Ermöglicht Fehlerberichterstattungen und Stapelabwicklungen zu anderen Erweiterungen',
+	'carp-desc' => 'Ermöglicht Fehlerberichte und Stapelabwicklung für andere Erweiterungen',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -99,6 +100,13 @@ $messages['ja'] = array(
  */
 $messages['ko'] = array(
 	'carp-desc' => '다른 확장 기능에 오류 보고와 스택 해제 기능을 제공합니다.',
+);
+
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'carp-desc' => 'Määt Fählermäldonge on Stapelußjaabe för ander Zohsazprojramme möjjelesch.',
 );
 
 /** Macedonian (македонски)
