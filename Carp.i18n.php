@@ -78,6 +78,13 @@ $messages['hsb'] = array(
 	'carp-desc' => 'Zmóžnja zdźělenje zmylkow a wotwiwanje staplow k druhim rozšěrjenjam.',
 );
 
+/** Hungarian (magyar)
+ * @author Dj
+ */
+$messages['hu'] = array(
+	'carp-desc' => 'Hiba jelentés és stack visszakeresési szolgáltatásokat biztosít más bővítményeknek.',
+);
+
 /** Italian (italiano)
  * @author Beta16
  */
