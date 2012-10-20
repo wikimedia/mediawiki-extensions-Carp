@@ -123,6 +123,13 @@ $messages['mk'] = array(
 	'carp-desc' => 'Пријавува грешки и одвиткува складови за другите додатоци.',
 );
 
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'carp-desc' => 'Voegt de mogelijkheid toe voor het rapporteren van fouten en het uitpluizen van de stack voor andere uitbreidingen',
+);
+
 /** Polish (polski)
  * @author BeginaFelicysym
  */
