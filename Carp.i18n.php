@@ -18,7 +18,8 @@ $messages['en'] = array(
 	'carp-template'     => '&#123;&#123; $1 &#125;&#125;',
 );
 
-/** Message documentation (Message documentation) */
+/** Message documentation (Message documentation)
+ */
 $messages['qqq'] = array(
 	'carp-function-msg' => 'Parser function error decorator. Paramaters:
 $1 is name of function,
@@ -143,4 +144,3 @@ $messages['pl'] = array(
 $messages['ru'] = array(
 	'carp-desc' => 'Предоставляет другим расширениям сервис для сообщений об ошибках и раскрутки стека вызовов.',
 );
-
