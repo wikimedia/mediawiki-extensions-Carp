@@ -12,7 +12,7 @@ $messages = array();
  * @author Van de Bugger
  */
 $messages['en'] = array(
-	'carp-desc' => 'Provides error reporting and stack unwinding to other extensions.',
+	'carp-desc' => 'Provides error reporting and stack unwinding to other extensions',
 	'carp-function-msg' => '&#123;&#123; $1: $2 &#125;&#125;',
 	'carp-template-msg' => '&#123;&#123; $1 &#124; $2 &#125;&#125;',
 	'carp-template'     => '&#123;&#123; $1 &#125;&#125;',
