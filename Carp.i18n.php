@@ -104,7 +104,7 @@ $messages['it'] = array(
  * @author Shirayuki
  */
 $messages['ja'] = array(
-	'carp-desc' => '他の拡張機能に、エラー報告やスタック解放の機能を提供する。',
+	'carp-desc' => '他の拡張機能に、エラー報告やスタック解放の機能を提供する',
 	'carp-function-msg' => '&#123;&#123; $1: $2 &#125;&#125;',
 	'carp-template-msg' => '&#123;&#123; $1 &#124; $2 &#125;&#125;',
 	'carp-template' => '&#123;&#123; $1 &#125;&#125;',
