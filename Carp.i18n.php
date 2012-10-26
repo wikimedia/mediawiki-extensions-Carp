@@ -79,6 +79,13 @@ $messages['gl'] = array(
 	'carp-desc' => 'Proporciona informes de erros e desenrolamento de pilas de memoria ás outras extensións.',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'carp-desc' => 'דיווח שגיאות ותצוגת מחסנית להרחבות אחרות',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
