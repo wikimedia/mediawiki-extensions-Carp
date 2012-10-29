@@ -72,6 +72,13 @@ $messages['es'] = array(
 	'carp-desc' => 'Proporciona informes de errores y el desenredo de la pila de memoria a las otras extensiones.',
 );
 
+/** French (français)
+ * @author Gomoko
+ */
+$messages['fr'] = array(
+	'carp-desc' => "Fournit à d'autres extensions un rapport d'erreur et de pile d'exécution",
+);
+
 /** Galician (galego)
  * @author Toliño
  */
