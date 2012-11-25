@@ -159,6 +159,13 @@ $messages['pl'] = array(
 	'carp-desc' => 'Umożliwia raportowanie błędów i stos przywracania do innych rozszerzeń.',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'carp-desc' => "A dà un rapòrt d'eror e le ciamà dla stack për àutre estension",
+);
+
 /** Russian (русский)
  * @author Van de Bugger
  */
