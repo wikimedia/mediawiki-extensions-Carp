@@ -160,10 +160,11 @@ $messages['pl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'carp-desc' => "A dà un rapòrt d'eror e le ciamà dla stack për àutre estension",
+	'carp-desc' => "A forniss a d'àutre estension un rapòrt d'eror e ëd baron d'esecussion",
 );
 
 /** Russian (русский)
