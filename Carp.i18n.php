@@ -19,8 +19,10 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
+	'carp-desc' => '{{desc|name=Carp|url=http://www.mediawiki.org/wiki/Extension:Carp}}',
 	'carp-function-msg' => 'Parser function error decorator. Paramaters:
 $1 is name of function,
 $2 is the error message.
@@ -143,6 +145,13 @@ $messages['ksh'] = array(
  */
 $messages['mk'] = array(
 	'carp-desc' => 'Пријавува грешки и одвиткува складови за другите додатоци.',
+);
+
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'carp-desc' => 'Menyediakan ciri-ciri melaporkan ralat dan merungkai tindanan pada sambungan lain',
 );
 
 /** Dutch (Nederlands)
