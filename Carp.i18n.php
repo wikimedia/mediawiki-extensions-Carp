@@ -45,6 +45,13 @@ $messages['ast'] = array(
 	'carp-desc' => "Ufre informes d'error y desendolcu de la pila de memoria a otres estensiones.",
 );
 
+/** South Azerbaijani (تورکجه)
+ * @author Mousa
+ */
+$messages['azb'] = array(
+	'carp-desc' => 'آیری اوزانتیلارا خطا بیلدیرمک و استک آچماق ایمکانی وئریر',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
