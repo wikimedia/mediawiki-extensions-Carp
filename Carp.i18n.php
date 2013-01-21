@@ -199,3 +199,10 @@ $messages['ru'] = array(
 $messages['uk'] = array(
 	'carp-desc' => 'Надає іншим розширенням сервіс для повідомлень про помилки і розкрутки стеку викликів',
 );
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Yfdyh000
+ */
+$messages['zh-hans'] = array(
+	'carp-desc' => '提供错误报告和堆栈展开到给其他扩展',
+);
