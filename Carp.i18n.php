@@ -136,6 +136,15 @@ $messages['ja'] = array(
 	'carp-template' => '&#123;&#123; $1 &#125;&#125;',
 );
 
+/** Georgian (ქართული)
+ * @author David1010
+ */
+$messages['ka'] = array(
+	'carp-function-msg' => '&#123;&#123; $1: $2 &#125;&#125;',
+	'carp-template-msg' => '&#123;&#123; $1 &#124; $2 &#125;&#125;',
+	'carp-template' => '&#123;&#123; $1 &#125;&#125;',
+);
+
 /** Korean (한국어)
  * @author 아라
  */
