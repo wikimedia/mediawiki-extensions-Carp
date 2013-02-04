@@ -195,6 +195,13 @@ $messages['pms'] = array(
 	'carp-desc' => "A forniss a d'àutre estension un rapòrt d'eror e ëd baron d'esecussion",
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'carp-desc' => "Dèje 'a segnalazione de errore e lleve 'a pile de le otre estenziune",
+);
+
 /** Russian (русский)
  * @author Van de Bugger
  */
