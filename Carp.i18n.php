@@ -222,3 +222,10 @@ $messages['uk'] = array(
 $messages['zh-hans'] = array(
 	'carp-desc' => '提供错误报告和堆栈展开到给其他扩展',
 );
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Justincheng12345
+ */
+$messages['zh-hant'] = array(
+	'carp-desc' => '提供錯誤報表並展開堆疊到其他擴展',
+);
