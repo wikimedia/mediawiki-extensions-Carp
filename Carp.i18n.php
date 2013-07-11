@@ -84,6 +84,13 @@ $messages['es'] = array(
 	'carp-desc' => 'Proporciona informes de errores y el desenredo de la pila de memoria a las otras extensiones.',
 );
 
+/** Persian (فارسی)
+ * @author Reza1615
+ */
+$messages['fa'] = array(
+	'carp-desc' => 'تهیهٔ گزارش خطا و پشتهٔ انهدام برای افزونه‌های دیگر',
+);
+
 /** French (français)
  * @author Gomoko
  */
