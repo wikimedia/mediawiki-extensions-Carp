@@ -126,6 +126,13 @@ $messages['hu'] = array(
 	'carp-desc' => 'Hiba jelentés és stack visszakeresési szolgáltatásokat biztosít más bővítményeknek.',
 );
 
+/** Interlingua (interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'carp-desc' => 'Forni a altere extensiones le reportage de errores e analyse del pila de memoria',
+);
+
 /** Italian (italiano)
  * @author Beta16
  */
