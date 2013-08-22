@@ -24,14 +24,14 @@ $messages['en'] = array(
 $messages['qqq'] = array(
 	'carp-desc' => '{{desc|name=Carp|url=http://www.mediawiki.org/wiki/Extension:Carp}}',
 	'carp-function-msg' => '{{Optional}}
-Parser function error decorator. Paramaters:
+Parser function error decorator. Parameters:
 * $1 - name of function
 * $2 - the error message
 This message formats parser function errors. For example,
     &#123;&#123; $1: $2 &#125;&#125;
 will generate message like this:
     <nowiki>{{ function-name: error-message }}</nowiki>
-Translators can change order (e. g. put function name on the left side of error message for LTR languages) or use another separator instead of colon, etc.',
+Translators can change order (e.g. put function name on the left side of error message for LTR languages) or use another separator instead of colon, etc.',
 	'carp-template-msg' => '{{Optional}}
 Template error decorator. Parameters:
 * $1 - template name
