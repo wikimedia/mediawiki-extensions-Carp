@@ -38,7 +38,8 @@ Template error decorator. Parameters:
 * $2 - error message
 Similar to parser function decorator, but this one formats template errors.',
 	'carp-template' => '{{Optional}}
-Template decorator. Used in stack backtrace.',
+Template decorator. Used in stack backtrace. Parameters:
+* $1 - frame name',
 );
 
 /** Asturian (asturianu)
