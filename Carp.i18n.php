@@ -56,6 +56,13 @@ $messages['azb'] = array(
 	'carp-desc' => 'آیری اوزانتیلارا خطا بیلدیرمک و استک آچماق ایمکانی وئریر',
 );
 
+/** Bikol Central (Bikol Central)
+ * @author Geopoet
+ */
+$messages['bcl'] = array(
+	'carp-desc' => 'Minataong pagtatala nin kasalaan asin bangay na minabuhi kan ibang mga ekstensyon',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
