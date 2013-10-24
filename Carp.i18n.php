@@ -231,6 +231,13 @@ $messages['ru'] = array(
 	'carp-desc' => 'Предоставляет другим расширениям сервис для сообщений об ошибках и раскрутки стека вызовов.',
 );
 
+/** Swedish (svenska)
+ * @author LittleGun
+ */
+$messages['sv'] = array(
+	'carp-desc' => 'Tillhandahåller felrapportering och minnesallokeringfelåtgärder till andra tillägg',
+);
+
 /** Ukrainian (українська)
  * @author Base
  */
