@@ -171,7 +171,7 @@ $messages['ka'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
-	'carp-desc' => '다른 확장 기능에 오류 보고와 스택 해제 기능을 제공합니다.',
+	'carp-desc' => '다른 확장 기능에 오류 보고와 스택 해제 기능을 제공합니다',
 );
 
 /** Colognian (Ripoarisch)
