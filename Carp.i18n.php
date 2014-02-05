@@ -101,9 +101,11 @@ $messages['fa'] = array(
 
 /** French (français)
  * @author Gomoko
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'carp-desc' => "Fournit à d'autres extensions un rapport d'erreur et de pile d'exécution",
+	'carp-function-msg' => '&#123;&#123; $1 : $2 &#125;&#125;',
 );
 
 /** Galician (galego)
