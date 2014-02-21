@@ -233,6 +233,13 @@ $messages['ru'] = array(
 	'carp-desc' => 'Предоставляет другим расширениям сервис для сообщений об ошибках и раскрутки стека вызовов.',
 );
 
+/** Scots (Scots)
+ * @author John Reid
+ */
+$messages['sco'] = array(
+	'carp-desc' => 'Provides mistak reporting an stack onwinding til ither extensions',
+);
+
 /** Swedish (svenska)
  * @author LittleGun
  */
