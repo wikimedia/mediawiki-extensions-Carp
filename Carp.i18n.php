@@ -219,6 +219,13 @@ $messages['pms'] = array(
 	'carp-desc' => "A forniss a d'àutre estension un rapòrt d'eror e ëd baron d'esecussion",
 );
 
+/** Portuguese (português)
+ * @author Hamilton Abreu
+ */
+$messages['pt'] = array(
+	'carp-desc' => "Fornece às outras extensões informação sobre erros e sobre o conteúdo do ''stack''",
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
