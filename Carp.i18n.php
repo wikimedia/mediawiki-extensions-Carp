@@ -244,7 +244,7 @@ $messages['ru'] = array(
  * @author John Reid
  */
 $messages['sco'] = array(
-	'carp-desc' => 'Provides mistak reporting an stack onwinding til ither extensions',
+	'carp-desc' => 'Provides mistak reporting n stack onwindin til ither extensions',
 );
 
 /** Swedish (svenska)
