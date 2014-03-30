@@ -198,21 +198,17 @@ if ( ! defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }; // if
 
-global $wgAutoloadClasses;
 $wgAutoloadClasses[ 'Carp' ] = __DIR__ . '/Carp.class.php';
 
-global $wgExtensionMessagesFiles;
+$wgMessagesDirs['Carp'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles[ 'Carp' ] = __DIR__ . '/Carp.i18n.php';
 
-global $wgExtensionCredits;
 $wgExtensionCredits[ 'other' ][] = array(
 	'path'    => __FILE__,
 	'name'    => 'Carp',
-	'version' => '0.0.1',
+	'version' => '0.1.0',
 	'license' => 'AGPLv3',
 	'author'  => array( '[https://www.mediawiki.org/wiki/User:Van_de_Bugger Van de Bugger]' ),
 	'url'     => 'https://www.mediawiki.org/wiki/Extension:Carp',
 	'descriptionmsg'  => 'carp-desc',
 );
-
-// end of file //

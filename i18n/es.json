@@ -1,0 +1,8 @@
+{
+    "@metadata": {
+        "authors": [
+            "Armando-Martin"
+        ]
+    },
+    "carp-desc": "Proporciona informes de errores y el desenredo de la pila de memoria a las otras extensiones."
+}
