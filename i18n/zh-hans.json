@@ -1,8 +1,9 @@
 {
     "@metadata": {
         "authors": [
-            "Yfdyh000"
+            "Yfdyh000",
+            "Hudafu"
         ]
     },
-    "carp-desc": "提供错误报告和堆栈展开到给其他扩展"
+    "carp-desc": "给其他扩展程序提供错误报告和堆栈展开"
 }
