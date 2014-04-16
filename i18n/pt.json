@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Hamilton Abreu"
-        ]
-    },
-    "carp-desc": "Fornece às outras extensões informação sobre erros e sobre o conteúdo do ''stack''"
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"carp-desc": "Fornece às outras extensões informação sobre erros e sobre o conteúdo do ''stack''"
 }

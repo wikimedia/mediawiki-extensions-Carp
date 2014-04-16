@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "LittleGun"
-        ]
-    },
-    "carp-desc": "Tillhandahåller felrapportering och minnesallokeringfelåtgärder till andra tillägg"
+	"@metadata": {
+		"authors": [
+			"LittleGun"
+		]
+	},
+	"carp-desc": "Tillhandahåller felrapportering och minnesallokeringfelåtgärder till andra tillägg"
 }

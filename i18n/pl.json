@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "BeginaFelicysym"
-        ]
-    },
-    "carp-desc": "Umożliwia raportowanie błędów i stos przywracania do innych rozszerzeń."
+	"@metadata": {
+		"authors": [
+			"BeginaFelicysym"
+		]
+	},
+	"carp-desc": "Umożliwia raportowanie błędów i stos przywracania do innych rozszerzeń."
 }
