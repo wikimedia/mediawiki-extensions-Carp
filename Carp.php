@@ -101,8 +101,8 @@
 	@code
 	class Example {
 		static function onParserFirstCallInit( &$parser ) {
-			$parser->setFunctionHook( 'example', 'Example::hookExample', SFH_OBJECT_ARGS );
-			// Note the flag SFH_OBJECT_ARGS -- it is important. We need a frame to unwind call stack.
+			$parser->setFunctionHook( 'example', 'Example::hookExample', Parser::SFH_OBJECT_ARGS );
+			// Note the flag Parser::SFH_OBJECT_ARGS -- it is important. We need a frame to unwind call stack.
 			return true;
 		}
 		static public function hookExample( $parser, $frame, $args ) {
