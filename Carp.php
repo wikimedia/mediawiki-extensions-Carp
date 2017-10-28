@@ -164,7 +164,7 @@
 	call stack order and decorators (braces) depend on user's language:
 
 	@li Localization of error message should be provided by Example extension;
-	@li Decorators are internationalized by the %Carp extension (see Carp.i18n.php file;
+	@li Decorators are internationalized by the %Carp extension (see files in i18n folder;
 		localization for a particular language may be missed);
 	@li In case of right-to-left language call stack is shown in reverse order,
 		frames will be separated by left arrows.
@@ -201,7 +201,6 @@ if ( ! defined( 'MEDIAWIKI' ) ) {
 $wgAutoloadClasses[ 'Carp' ] = __DIR__ . '/Carp.class.php';
 
 $wgMessagesDirs['Carp'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles[ 'Carp' ] = __DIR__ . '/Carp.i18n.php';
 
 $wgExtensionCredits[ 'other' ][] = array(
 	'path'    => __FILE__,
