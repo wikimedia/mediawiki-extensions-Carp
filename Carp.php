@@ -194,20 +194,16 @@
 	See @ref carp_extension for general extension description.
 **/
 
-if ( ! defined( 'MEDIAWIKI' ) ) {
-	die( 'Not an entry point.' );
-}; // if
-
-$wgAutoloadClasses[ 'Carp' ] = __DIR__ . '/Carp.class.php';
-
-$wgMessagesDirs['Carp'] = __DIR__ . '/i18n';
-
-$wgExtensionCredits[ 'other' ][] = array(
-	'path'    => __FILE__,
-	'name'    => 'Carp',
-	'version' => '0.1.0',
-	'license' => 'AGPLv3',
-	'author'  => array( '[https://www.mediawiki.org/wiki/User:Van_de_Bugger Van de Bugger]' ),
-	'url'     => 'https://www.mediawiki.org/wiki/Extension:Carp',
-	'descriptionmsg'  => 'carp-desc',
-);
+ if ( function_exists( 'wfLoadExtension' ) ) {
+	wfLoadExtension( 'Carp' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$wgMessagesDirs['Carp'] = __DIR__ . '/i18n';
+	wfWarn(
+		'Deprecated PHP entry point used for the Carp extension. ' .
+		'Please use wfLoadExtension instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	);
+	return;
+} else {
+	die( 'This version of the Carp extension requires MediaWiki 1.29+' );
+}
