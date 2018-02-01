@@ -6,7 +6,7 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:Carp",
 	"descriptionmsg": "carp-desc",
-	"license-name": "AGPL-3.0",
+	"license-name": "AGPL-3.0-only",
 	"type": "other",
 	"requires": {
 		"MediaWiki": ">= 1.29.0"
