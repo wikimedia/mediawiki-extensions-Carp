@@ -8,6 +8,9 @@
 	"descriptionmsg": "carp-desc",
 	"license-name": "AGPL-3.0",
 	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
 	"MessagesDirs": {
 		"Carp": [
 			"i18n"
