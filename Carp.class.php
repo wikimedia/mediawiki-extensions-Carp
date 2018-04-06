@@ -59,7 +59,6 @@ if ( ! defined( 'MEDIAWIKI' ) ) {
 **/
 class Carp extends Exception {
 
-
 	/**
 		@brief Throws an exception of Carp class.
 		@param[in] string $key Message @em key (@em not message!).
@@ -78,12 +77,11 @@ class Carp extends Exception {
 		}
 		@endcode
 	**/
-	static public function throwNew( $key ) {
+	public static function throwNew( $key ) {
 		$args = array_slice( func_get_args(), 1 );
 		$msg  = wfMessage( $key, $args )->escaped();
 		throw new Carp( $msg );
 	} // function throwNew
-
 
 	/**
 		@brief Create error for a @em parser @em function from given exception.
@@ -112,11 +110,11 @@ class Carp extends Exception {
 		and this one allows to choose it in runtime by specifying the value of parameter $stack.
 		Consider using Carp::confess first.
 	**/
-	static public function fmess( $name, $frame, $ex, $stack = true ) {
+	public static function fmess( $name, $frame, $ex, $stack = true ) {
 		global $wgContLang;
 		global $firephp;
 		$firephp->log( get_class( $frame ) );
-		$err = array();
+		$err = [];
 		$err[] = wfMessage( 'carp-function-msg', $name, $ex->getMessage() )->escaped();
 		if ( $stack ) {
 			while ( $frame !== false ) {
@@ -127,12 +125,10 @@ class Carp extends Exception {
 				$err = array_reverse( $err );
 			}; // if
 		};
-		return
-			'<span class="error">' .
+		return '<span class="error">' .
 			implode( ' ' . $wgContLang->getArrow() . ' ', $err ) .
 			'</span>';
 	} // function fmess
-
 
 	/**
 		@brief Create error for a @em template from given exception.
@@ -160,14 +156,13 @@ class Carp extends Exception {
 		but providing parser function is out of scope of %Carp extension.
 		TemplateSpecial extension defines parser function.
 	**/
-	static public function tmess( $skip, $frame, $ex, $stack = true ) {
+	public static function tmess( $skip, $frame, $ex, $stack = true ) {
 		global $wgContLang;
-		$err = array();
+		$err = [];
 		while ( $skip > 0 && $frame !== false ) {
 			$frame = self::getNextFrame( $frame );
 			-- $skip;
 		}; // while
-		global $firephp;
 		$err[] = wfMessage( 'carp-template-msg', self::getFrameName( $frame, true ), $ex->getMessage() )->escaped();
 		if ( $stack ) {
 			$frame = self::getNextFrame( $frame );
@@ -179,12 +174,10 @@ class Carp extends Exception {
 				$err = array_reverse( $err );
 			}; // if
 		};
-		return
-			'<span class="error">' .
+		return '<span class="error">' .
 			implode( ' ' . $wgContLang->getArrow() . ' ', $err ) .
 			'</span>';
 	} // function tmess
-
 
 	/**
 		@brief Creates error for a @em parser @em function from given exception
@@ -205,10 +198,9 @@ class Carp extends Exception {
 		@li Carp::confess — recommended function
 		@li Carp::fmess — for more detailed description
 	**/
-	static public function croak( $name, $frame, $ex ) {
+	public static function croak( $name, $frame, $ex ) {
 		return self::fmess( $name, $frame, $ex, false );
 	} // function croak
-
 
 	/**
 		@brief Creates error for a @em parser @em function from given exception @em with call stack
@@ -230,10 +222,9 @@ class Carp extends Exception {
 			@li Carp::croak
 			@li Carp::fmess — for more detailed description
 	**/
-	static public function confess( $name, $frame, $ex ) {
+	public static function confess( $name, $frame, $ex ) {
 		return self::fmess( $name, $frame, $ex, true );
 	} // function confess
-
 
 	/**
 		@brief Returns name of specified frame.
@@ -246,8 +237,7 @@ class Carp extends Exception {
 		@return String, a frame name. Empty sring is returned in case of problems ($frame is not
 			an instance of PPFrame, there is no frame title, etc).
 	**/
-	static public function getFrameName( $frame, $full = false, $canonical = false ) {
-
+	public static function getFrameName( $frame, $full = false, $canonical = false ) {
 		if ( method_exists( $frame, 'getTitle' ) ) {
 			$title = $frame->getTitle();
 		} elseif ( property_exists( $frame, 'title' ) ) {
@@ -268,7 +258,7 @@ class Carp extends Exception {
 				$ns = $title->getNamespace();
 				if ( $ns == NS_MAIN ) {
 					return $text;
-				}; //if
+				}; // if
 				return MWNamespace::getCanonicalName( $ns ) . ':' . $text;
 			} else {
 				return $title->getPrefixedText();
@@ -276,9 +266,7 @@ class Carp extends Exception {
 		} else {
 			return $title->getText();
 		}; // if
-
 	} // function getFrameName
-
 
 	/**
 		@brief Returns parent of the specified frame.
@@ -287,15 +275,13 @@ class Carp extends Exception {
 			exist or $frame is not an instance of Frame (more precisely, if $frame does not have
 			property @c parent).
 	**/
-	static public function getNextFrame( $frame ) {
+	public static function getNextFrame( $frame ) {
 		if ( property_exists( $frame, 'parent' ) ) {
 			return $frame->parent;
 		}; // if
 		return false;
 	} // function getNextFrame
 
-
 } // class Carp
-
 
 // end of file //

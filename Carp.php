@@ -54,8 +54,8 @@
 
 	@verbatim
 	Oops! at assa.pl line 9
-	    main::bar() called at assa.pl line 13
-	    main::foo() called at assa.pl line 16
+		main::bar() called at assa.pl line 13
+		main::foo() called at assa.pl line 16
 	@endverbatim
 
 	Why don't we have such well-known troubleshooting feature in wikitext? Well, we have now.
@@ -194,7 +194,7 @@
 	See @ref carp_extension for general extension description.
 **/
 
- if ( function_exists( 'wfLoadExtension' ) ) {
+if ( function_exists( 'wfLoadExtension' ) ) {
 	wfLoadExtension( 'Carp' );
 	// Keep i18n globals so mergeMessageFileList.php doesn't break
 	$wgMessagesDirs['Carp'] = __DIR__ . '/i18n';
