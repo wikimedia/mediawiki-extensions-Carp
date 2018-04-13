@@ -60,23 +60,23 @@ if ( ! defined( 'MEDIAWIKI' ) ) {
 class Carp extends Exception {
 
 	/**
-		@brief Throws an exception of Carp class.
-		@param[in] string $key Message @em key (@em not message!).
-		@param[in]        …    Parameters of message, if any.
-		@return The function does not return, it throws an exception.
+		 @brief Throws an exception of Carp class.
+		 @param string $key Message @em key (@em not message!).
+		 @param        …    Parameters of message, if any.
+		 @return The function does not return, it throws an exception.
 
 		The funtion constructs new message from the specified message key and parameters, then
 		creates a new instance of class Carp, then throws an exception.
 
 		Use it when error condition is detected, for example:
 
-		@code
+		 @code
 		if ( $arg < 0 ) {
 			// 'negative-arg' is a key of message with one argument.
 			Carp::throwNew( 'negative-arg', $arg );
 		}
-		@endcode
-	**/
+		 @endcode
+	 */
 	public static function throwNew( $key ) {
 		$args = array_slice( func_get_args(), 1 );
 		$msg  = wfMessage( $key, $args )->escaped();
@@ -84,17 +84,17 @@ class Carp extends Exception {
 	} // function throwNew
 
 	/**
-		@brief Create error for a @em parser @em function from given exception.
-		@param[in] string    $name  User-visible name of parser function. This cannot be fetched
+		 @brief Create error for a @em parser @em function from given exception.
+		 @param string $name User-visible name of parser function. This cannot be fetched
 			from frame, so the name should be explicitly specified. Specify name as it visible in
 			wikitext (including leading hash, if any), not in PHP code.
-		@param[in] PPFrame   $frame Parser frame the parser function is called from.
-		@param[in] Exception $ex    Caught exception — a source of message. It can be either an
+		 @param PPFrame $frame Parser frame the parser function is called from.
+		 @param Exception $ex Caught exception — a source of message. It can be either an
 			instance of class Exception or any of its descendants (including Carp). Message is
 			fetched by invoking @c getMessage method.
-		@param[in] boolean   $stack If @c true, result includes call stack backtrace,
+		 @param bool $stack If @c true, result includes call stack backtrace,
 			otherwise call stack backtrace is not included.
-		@return    String, an error to return from parser function.
+		 @return String an error to return from parser function.
 			It is enclosed into @c span HTML element with class @c error,
 			so will be visually highlighted and recognized as error by @#iferror parser function
 			(defined in ParserFunctions extension).
@@ -109,7 +109,7 @@ class Carp extends Exception {
 		Carp::croak does @em not,
 		and this one allows to choose it in runtime by specifying the value of parameter $stack.
 		Consider using Carp::confess first.
-	**/
+	 */
 	public static function fmess( $name, $frame, $ex, $stack = true ) {
 		global $wgContLang;
 		global $firephp;
@@ -131,13 +131,13 @@ class Carp extends Exception {
 	} // function fmess
 
 	/**
-		@brief Create error for a @em template from given exception.
-		@param[in] integer   $skip  Number of frames to skip from the top of call stack.
-		@param[in] PPFrame   $frame Parser frame.
-		@param[in] Exception $ex    Caught exception.
-		@param[in] boolean   $stack If @c true, result includes call stack backtrace,
+		 @brief Create error for a @em template from given exception.
+		 @param int $skip Number of frames to skip from the top of call stack.
+		 @param PPFrame $frame Parser frame.
+		 @param Exception $ex Caught exception.
+		 @param bool $stack If @c true, result includes call stack backtrace,
 			otherwise call stack backtrace is not included.
-		@return    String, error to return from a @em template.
+		 @return String error to return from a @em template.
 
 		It is unlikely you need this function. Look at Carp::confess first.
 
@@ -145,17 +145,17 @@ class Carp extends Exception {
 		from a @em template, not from a @em parser @em function. Strictly, differences between
 		these two functions are:
 
-		@li There is no $name parameter because name of template can be fetched from frame.
-		@li It is possible to skip few items from the top of the call stack. It allows writing
+		 @li There is no $name parameter because name of template can be fetched from frame.
+		 @li It is possible to skip few items from the top of the call stack. It allows writing
 			templates which report errors on behalf of other templates.
-		@li Error is formatted slightly different.
+		 @li Error is formatted slightly different.
 
-		@note This is not a @em parser @em function, and so, it can not be called from wikitext
+		 @note This is not a @em parser @em function, and so, it can not be called from wikitext
 		directly.
 		This is a PHP function which provides basic functionality,
 		but providing parser function is out of scope of %Carp extension.
 		TemplateSpecial extension defines parser function.
-	**/
+	 */
 	public static function tmess( $skip, $frame, $ex, $stack = true ) {
 		global $wgContLang;
 		$err = [];
@@ -180,12 +180,12 @@ class Carp extends Exception {
 	} // function tmess
 
 	/**
-		@brief Creates error for a @em parser @em function from given exception
-			@em without call stack backtrace.
-		@param[in] string    $name  User-visible name of parser function.
-		@param[in] PPFrame   $frame Parser frame the parser function is called from.
-		@param[in] Exception $ex    Caught exception.
-		@return    String, error to return from a parser function.
+		 @brief Creates error for a @em parser @em function from given exception
+			 @em without call stack backtrace.
+		 @param string $name User-visible name of parser function.
+		 @param PPFrame $frame Parser frame the parser function is called from.
+		 @param Exception $ex Caught exception.
+		 @return String error to return from a parser function.
 
 		This function is intended to be called from implementation of a parser function to create
 		error to return from the parser function instead of normal result.
@@ -194,21 +194,21 @@ class Carp extends Exception {
 		Carp::confess returns an error @em with backtrace. Both are simle wrappers for
 		Carp::fmess, but this one is @em not recommended to use, use Carp::confess instead.
 
-		@sa
-		@li Carp::confess — recommended function
-		@li Carp::fmess — for more detailed description
-	**/
+		 @sa
+		 @li Carp::confess — recommended function
+		 @li Carp::fmess — for more detailed description
+	 */
 	public static function croak( $name, $frame, $ex ) {
 		return self::fmess( $name, $frame, $ex, false );
 	} // function croak
 
 	/**
-		@brief Creates error for a @em parser @em function from given exception @em with call stack
+		 @brief Creates error for a @em parser @em function from given exception @em with call stack
 			backtrace.
-		@param[in] string    $name  User-visible mame of parser function.
-		@param[in] PPFrame   $frame Parser frame the parser function is called from.
-		@param[in] Exception $ex    Caught exception.
-		@return    String, error to return from a parser function.
+		 @param string $name User-visible mame of parser function.
+		 @param PPFrame $frame Parser frame the parser function is called from.
+		 @param Exception $ex Caught exception.
+		 @return String error to return from a parser function.
 
 		This function is intended to be called from implementation of a @em parser @em function
 		to create error to return from the parser function instead of normal result.
@@ -218,25 +218,25 @@ class Carp extends Exception {
 		Carp::croak creates an error @em without backtrace. Both are simle wrappers for
 		Carp::fmess, but this one is @em recommended to use.
 
-		@sa
-			@li Carp::croak
-			@li Carp::fmess — for more detailed description
-	**/
+		 @sa
+			 @li Carp::croak
+			 @li Carp::fmess — for more detailed description
+	 */
 	public static function confess( $name, $frame, $ex ) {
 		return self::fmess( $name, $frame, $ex, true );
 	} // function confess
 
 	/**
-		@brief Returns name of specified frame.
-		@param[in] PPFrame $frame
-		@param[in] boolean $full      If @c true, result is a full name of frame (with prefix,i. e.
+		 @brief Returns name of specified frame.
+		 @param PPFrame $frame
+		 @param bool $full If @c true, result is a full name of frame (with prefix,i. e.
 			namespace name), otherwise result is a short name (without prefix).
-		@param[in] boolean $canonical If @c true, result's prefix (if any) is canonical (e. g.
+		 @param bool $canonical If @c true, result's prefix (if any) is canonical (e. g.
 			English, not localized), otherwise result's prefix is localized. This parameter
 			does not matter if $full is @c false.
-		@return String, a frame name. Empty sring is returned in case of problems ($frame is not
+		 @return String a frame name. Empty sring is returned in case of problems ($frame is not
 			an instance of PPFrame, there is no frame title, etc).
-	**/
+	 */
 	public static function getFrameName( $frame, $full = false, $canonical = false ) {
 		if ( method_exists( $frame, 'getTitle' ) ) {
 			$title = $frame->getTitle();
@@ -269,12 +269,12 @@ class Carp extends Exception {
 	} // function getFrameName
 
 	/**
-		@brief Returns parent of the specified frame.
-		@param[in] PPFrame $frame A frame.
-		@return PPFrame, a parent of the specified frame, or @c false, if parent frame does not
+		 @brief Returns parent of the specified frame.
+		 @param PPFrame $frame A frame.
+		 @return PPFrame a parent of the specified frame, or @c false, if parent frame does not
 			exist or $frame is not an instance of Frame (more precisely, if $frame does not have
 			property @c parent).
-	**/
+	 */
 	public static function getNextFrame( $frame ) {
 		if ( property_exists( $frame, 'parent' ) ) {
 			return $frame->parent;

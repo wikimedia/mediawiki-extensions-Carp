@@ -2,17 +2,7 @@
 <ruleset>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="Generic.Files.LineLength.TooLong" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.DirectionParam" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamName" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.NotPunctuationReturn" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.NotShortBoolParam" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.NotShortIntParam" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.SpacingAfterParamName" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.SpacingAfterParamType" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.SpacingBeforeReturnType" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.SpacingDocTag" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.SyntaxAlignedDocClose" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.SyntaxCloseTag" />
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
 		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.wgPrefix" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
