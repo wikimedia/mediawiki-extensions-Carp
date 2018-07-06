@@ -234,7 +234,7 @@ class Carp extends Exception {
 		 @param bool $canonical If @c true, result's prefix (if any) is canonical (e. g.
 			English, not localized), otherwise result's prefix is localized. This parameter
 			does not matter if $full is @c false.
-		 @return String a frame name. Empty sring is returned in case of problems ($frame is not
+		 @return String a frame name. Empty string is returned in case of problems ($frame is not
 			an instance of PPFrame, there is no frame title, etc).
 	 */
 	public static function getFrameName( $frame, $full = false, $canonical = false ) {
