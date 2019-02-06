@@ -18,7 +18,7 @@
 	------------------------------------------------------------------------------------------------
 */
 
-if ( ! defined( 'MEDIAWIKI' ) ) {
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }; // if
 
@@ -121,7 +121,7 @@ class Carp extends Exception {
 				$err[] = wfMessage( 'carp-template', self::getFrameName( $frame ) )->escaped();
 				$frame = self::getNextFrame( $frame );
 			}; // while
-			if ( ! $wgContLang->isRTL() ) {
+			if ( !$wgContLang->isRTL() ) {
 				$err = array_reverse( $err );
 			}; // if
 		};
@@ -161,7 +161,7 @@ class Carp extends Exception {
 		$err = [];
 		while ( $skip > 0 && $frame !== false ) {
 			$frame = self::getNextFrame( $frame );
-			-- $skip;
+			--$skip;
 		}; // while
 		$err[] = wfMessage( 'carp-template-msg', self::getFrameName( $frame, true ), $ex->getMessage() )->escaped();
 		if ( $stack ) {
@@ -170,7 +170,7 @@ class Carp extends Exception {
 				$err[] = wfMessage( 'carp-template', self::getFrameName( $frame, true ) )->escaped();
 				$frame = self::getNextFrame( $frame );
 			}; // while
-			if ( ! $wgContLang->isRTL() ) {
+			if ( !$wgContLang->isRTL() ) {
 				$err = array_reverse( $err );
 			}; // if
 		};
@@ -245,7 +245,7 @@ class Carp extends Exception {
 		} else {
 			return '';
 		}; // if
-		if ( ! $title instanceof Title ) {
+		if ( !$title instanceof Title ) {
 			return '';
 		}; // if
 
