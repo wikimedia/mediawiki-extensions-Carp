@@ -37,7 +37,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	which includes recommended usage of the %Carp class.
 
 	Carp class extends PHP's Exception class and provides few static functions for error reporting.
-	In an implemantation of a parser function you will likely use just two functions:
+	In an implementation of a parser function you will likely use just two functions:
 
 	@li Carp::throwNew — Throw an exception.
 	@li Carp::confess — Format error from caught exception. Error will include
