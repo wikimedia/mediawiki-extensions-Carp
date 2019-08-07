@@ -18,10 +18,6 @@
 	------------------------------------------------------------------------------------------------
 */
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die( 'Not an entry point.' );
-}; // if
-
 /**
 	@file
 	@brief The implementation of the extension.
