@@ -90,7 +90,7 @@ class Carp extends Exception {
 	 * fetched by invoking @c getMessage method.
 	 * @param bool $stack If @c true, result includes call stack backtrace,
 	 * otherwise call stack backtrace is not included.
-	 * @return String an error to return from parser function.
+	 * @return string an error to return from parser function.
 	 * It is enclosed into @c span HTML element with class @c error,
 	 * so will be visually highlighted and recognized as error by @#iferror parser function
 	 * (defined in ParserFunctions extension).
@@ -133,7 +133,7 @@ class Carp extends Exception {
 	 * @param Exception $ex Caught exception.
 	 * @param bool $stack If @c true, result includes call stack backtrace,
 	 * otherwise call stack backtrace is not included.
-	 * @return String error to return from a @em template.
+	 * @return string error to return from a @em template.
 	 *
 	 * It is unlikely you need this function. Look at Carp::confess first.
 	 *
@@ -181,7 +181,7 @@ class Carp extends Exception {
 	 * @param string $name User-visible name of parser function.
 	 * @param PPFrame $frame Parser frame the parser function is called from.
 	 * @param Exception $ex Caught exception.
-	 * @return String error to return from a parser function.
+	 * @return string error to return from a parser function.
 	 *
 	 * This function is intended to be called from implementation of a parser function to create
 	 * error to return from the parser function instead of normal result.
@@ -204,7 +204,7 @@ class Carp extends Exception {
 	 * @param string $name User-visible mame of parser function.
 	 * @param PPFrame $frame Parser frame the parser function is called from.
 	 * @param Exception $ex Caught exception.
-	 * @return String error to return from a parser function.
+	 * @return string error to return from a parser function.
 	 *
 	 * This function is intended to be called from implementation of a @em parser @em function
 	 * to create error to return from the parser function instead of normal result.
@@ -230,7 +230,7 @@ class Carp extends Exception {
 	 * @param bool $canonical If @c true, result's prefix (if any) is canonical (e. g.
 	 * English, not localized), otherwise result's prefix is localized. This parameter
 	 * does not matter if $full is @c false.
-	 * @return String a frame name. Empty string is returned in case of problems ($frame is not
+	 * @return string a frame name. Empty string is returned in case of problems ($frame is not
 	 * an instance of PPFrame, there is no frame title, etc).
 	 */
 	public static function getFrameName( $frame, $full = false, $canonical = false ) {
