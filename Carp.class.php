@@ -58,8 +58,7 @@ class Carp extends Exception {
 	/**
 	 * @brief Throws an exception of Carp class.
 	 * @param string $key Message @em key (@em not message!).
-	 * @param        …    Parameters of message, if any.
-	 * @return The function does not return, it throws an exception.
+	 * @param mixed ...$params Parameters of message, if any.
 	 *
 	 * The funtion constructs new message from the specified message key and parameters, then
 	 * creates a new instance of class Carp, then throws an exception.
@@ -73,9 +72,8 @@ class Carp extends Exception {
 	 * }
 	 * @endcode
 	 */
-	public static function throwNew( $key ) {
-		$args = array_slice( func_get_args(), 1 );
-		$msg  = wfMessage( $key, $args )->escaped();
+	public static function throwNew( $key, ...$params ) {
+		$msg = wfMessage( $key, $params )->escaped();
 		throw new Carp( $msg );
 	} // function throwNew
 
